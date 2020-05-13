@@ -1,6 +1,6 @@
 {% set name = "exchangelib" %}
-{% set version = "3.1.1" %}
-{% set sha256 = "33e76159fa14e004ae8333ae0a0d2bd9c6d4f682f9f63ad659c058ecadb20fef" %}
+{% set version = "3.2.0" %}
+{% set sha256 = "aef6066f7ea2ba7c8afbbb910c198a7f68f0ffb914734310100b2583d026b427" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  skip: True  # [py<35]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py<35]
 
 requirements:
   host:
@@ -46,7 +46,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Client for Microsoft Exchange Web Services (EWS)'
+  summary: Client for Microsoft Exchange Web Services (EWS)
   doc_url: https://github.com/ecederstrand/exchangelib
   dev_url: https://github.com/ecederstrand/exchangelib
 
