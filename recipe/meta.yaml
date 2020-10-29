@@ -1,6 +1,6 @@
 {% set name = "exchangelib" %}
-{% set version = "3.2.1" %}
-{% set sha256 = "cf19a6264b65b9dc81c0626edb4a382e212e8e94bc93e65eedc8eb7a514e068b" %}
+{% set version = "3.3.2" %}
+{% set sha256 = "fd4c59576f944c2fe6af4a96a3e0f7b583080bd00a596100fde12537d8539757" %}
 
 package:
   name: {{ name|lower }}
@@ -11,30 +11,29 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py<35]
+  skip: true  # [py<37]
 
 requirements:
   host:
     - python
     - pip
   run:
+    - backports.zoneinfo  # [py<39]
     - cached-property
     - defusedxml >=0.6.0
-    - dnspython >=1.14.0
+    - dnspython >=2.0.0
     - isodate
     - lxml >3.0
     - oauthlib
     - pygments
     - python
-    - python-dateutil
-    - pytz
     - requests >=2.7
     - requests_ntlm >=0.2.0
-    - requests-kerberos
     - requests-negotiate-sspi  # [win]
     - requests-oauthlib
+    - python-tzdata
     - tzlocal
 
 test:
