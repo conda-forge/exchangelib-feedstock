@@ -1,6 +1,6 @@
 {% set name = "exchangelib" %}
-{% set version = "4.5.0" %}
-{% set sha256 = "e8b377dc3a1c88c5b06a1ee52fd11383653c578e515570f49952ceb8848452a3" %}
+{% set version = "4.5.1" %}
+{% set sha256 = "8b7c4ecd4bf78af08aa7ee1d95596617f9c7a1758c6be57b745dba5dbb99bdb4" %}
 
 package:
   name: {{ name|lower }}
