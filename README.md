@@ -1,11 +1,11 @@
-About exchangelib
-=================
+About exchangelib-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/exchangelib-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ecederstrand/exchangelib
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/exchangelib-feedstock/blob/main/LICENSE.txt)
 
 Summary: Client for Microsoft Exchange Web Services (EWS)
 
