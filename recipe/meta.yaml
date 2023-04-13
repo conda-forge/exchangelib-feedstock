@@ -1,6 +1,6 @@
 {% set name = "exchangelib" %}
-{% set version = "4.8.0" %}
-{% set sha256 = "a1f8f7b97c08f08f2a57785dc262f4cc6a115b0db3f06afa1c8b71454fb8bce7" %}
+{% set version = "5.0.2" %}
+{% set sha256 = "1c85a405550c49be4eef29cefb8a679250a060618e54a2ae7956cab527fb9253" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<37]
 
