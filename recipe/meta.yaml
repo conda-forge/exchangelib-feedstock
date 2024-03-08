@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py<37]
+  skip: true  # [py<38]
 
 requirements:
   build:
@@ -26,13 +26,13 @@ requirements:
     - backports.zoneinfo  # [py<39]
     - cached-property
     - defusedxml >=0.6.0
-    - dnspython >=2.0.0
+    - dnspython >=2.2.0
     - isodate
     - lxml >3.0
     - oauthlib
     - pygments
     - python
-    - requests >=2.7
+    - requests >=2.31.0
     - requests_ntlm >=0.2.0
     - requests-negotiate-sspi  # [win]
     - requests-oauthlib
