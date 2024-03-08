@@ -1,6 +1,6 @@
 {% set name = "exchangelib" %}
-{% set version = "5.1.0" %}
-{% set sha256 = "f835c14d380839dc74f53664f091cafc978a158855877a510c0c5554b85cdbac" %}
+{% set version = "5.2.0" %}
+{% set sha256 = "c14403aa704230bafe570b7bbf21fc97228f382c16aef5230afef3df106d861c" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py<37]
+  skip: true  # [py<38]
 
 requirements:
   build:
@@ -26,13 +26,13 @@ requirements:
     - backports.zoneinfo  # [py<39]
     - cached-property
     - defusedxml >=0.6.0
-    - dnspython >=2.0.0
+    - dnspython >=2.2.0
     - isodate
     - lxml >3.0
     - oauthlib
     - pygments
     - python
-    - requests >=2.7
+    - requests >=2.31.0
     - requests_ntlm >=0.2.0
     - requests-negotiate-sspi  # [win]
     - requests-oauthlib
