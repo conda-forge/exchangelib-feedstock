@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<38]
 
@@ -22,6 +22,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - backports.zoneinfo  # [py<39]
     - cached-property
